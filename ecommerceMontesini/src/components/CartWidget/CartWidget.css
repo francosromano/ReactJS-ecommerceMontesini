@@ -1,0 +1,8 @@
+.estilo {
+    display: flex;
+    justify-content:center;
+    font-weight: bolder;
+    font-size:20px;
+    background-color:rgba(22, 63, 139, 0.774);
+    width:50px;
+}
