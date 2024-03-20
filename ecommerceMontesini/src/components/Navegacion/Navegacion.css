@@ -1,0 +1,14 @@
+.estiloNavegacion{
+    display: flex;
+    gap: 40px;
+    padding: 10px;
+}
+
+.btnNavegacion{
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 18px;
+    font-weight: 500;
+}
+

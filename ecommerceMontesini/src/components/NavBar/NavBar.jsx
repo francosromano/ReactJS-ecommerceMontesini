@@ -1,5 +1,6 @@
 import CartWidget from "../CartWidget/CartWidget"
 import NavegacionComp from "../Navegacion/Navegacion"
+import { Link } from "react-router-dom"
 import './NavBar.css'
 
 const NavBar = () => {
@@ -7,8 +8,8 @@ const NavBar = () => {
     return (
         <nav>
             <div className="cartWidget">
-                <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-                    <img style={{ width: '250px' }} src='https://farmaciamontesini.com.ar/index_files/FM-logo2380.png' alt="Logo Farmacia" />
+                <div className="logoNavBar">
+                    <Link to={`/home`}><img className="imgLogo" src='https://farmaciamontesini.com.ar/index_files/FM-logo2380.png' alt="Logo Farmacia" /></Link>
                 </div>
                 <div>
                     <CartWidget />

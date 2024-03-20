@@ -1,28 +1,26 @@
 import './App.css'
 import NavBar from './components/NavBar/NavBar'
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import ProductosComp from './components/Productos/Productos'
-import ProductoComp from './components/Producto/Producto'
-
-
-
-
 function App() {
 
   return (
     <>
-        <NavBar />
-        <div style={{ display: 'flex', flexDirection: 'column' }}>
-          <ItemListContainer greeting={'Farmacia'} />
-        </div>
       <BrowserRouter>
+
+        <NavBar />
+
         <Routes>
-          <Route exact path='/productos' element={<ProductosComp />} />
-          <Route exact path='/producto/:prodId' element={<ProductoComp />} />
+
+          <Route exact path='/home' element={<ItemListContainer />} />
+          <Route exact path='/categoria/:categoria' element={<ItemListContainer />} />
+          <Route exact path='/detalle/:detalle' element={<ItemDetailContainer />} />
+          <Route exact path='*' element={<h1>Direccion no encontrada</h1>} />
+
         </Routes>
+
       </BrowserRouter>
-      
     </>
   )
 }

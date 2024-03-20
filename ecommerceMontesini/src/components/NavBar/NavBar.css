@@ -1,7 +1,17 @@
 .divNavBar {
     display: flex;
     justify-content: center
-}   
+}
+
+.logoNavBar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.imgLogo {
+    width: 250px;
+}
 
 .btnsNavBar {
     display: flex;

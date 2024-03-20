@@ -15,7 +15,6 @@ const ItemCount = ({ stock }) => {
     const handleMas = () => {
         if (contador < stock) {
             setContador(contador + 1)
-
         }
     }
 
