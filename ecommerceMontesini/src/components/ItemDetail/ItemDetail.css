@@ -2,6 +2,7 @@
 
 .cardDetalle{
     margin-inline: 50px;
+    margin-top: 9.5px;
     padding: 20px;
     height: 500px;
     display:flex;
@@ -20,6 +21,7 @@
 .divImgDetalle{
     width: 50%;
     align-self: center;
+    border-right: 1px solid rgba(30, 80, 173, 0.774);
 }
 
 .estiloImgDetalle{
@@ -31,7 +33,7 @@
 }
 
 .descripDetalle{
-    padding:20px
+    padding: 20px 20px 0px 20px
 }
 
 .divBreadcrums{
@@ -39,6 +41,12 @@
     align-content: start;
     color: darkgray;
 }
+
+.breadcrumsCat{
+    text-decoration: none;
+    color:darkgray
+}
+
 .tituloDetalle{
     color: rgba(5, 46, 122, 0.774);
     font-size: 30px ;

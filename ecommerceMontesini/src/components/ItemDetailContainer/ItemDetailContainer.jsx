@@ -1,30 +1,29 @@
 import { useState, useEffect } from "react"
-import { getProductosbyID } from "../../asyncMock"
+import { getProductosbyName } from "../../asyncMock"
 import ItemDetail from "../ItemDetail/ItemDetail"
 import { useParams } from "react-router-dom"
 
 // eslint-disable-next-line react/prop-types
-const ItemDetailContainer = ({ greeting }) => {
+const ItemDetailContainer = () => {
 
     const [productos, setProductos] = useState([null])
 
-    const { detalle } = useParams()
+    const { nombre } = useParams()
 
 
     useEffect(() => {
-        getProductosbyID(detalle)
+        getProductosbyName(nombre)
             .then(resolve => {
                 setProductos(resolve)
             })
             .catch(error => {
                 console.error(error)
             })
-    }, [detalle])
+    }, [nombre])
 
     return (
         <>
             <div>
-                <h1>{greeting}</h1>
                 <ItemDetail {...productos} />
             </div>
         </>

@@ -5,9 +5,9 @@ const NavegacionComp = () =>{
     return(
         <>
         <div className='estiloNavegacion' >
-            <Link to={'/categoria/farmacia'}><button className='btnNavegacion'>Farmacia </button></Link>
-            <Link to={'/categoria/perfumeria'}><button className='btnNavegacion'>Perfumeria </button></Link>    
-            <Link to={'/categoria/dermocosmetica'}><button className='btnNavegacion'>Dermocosmética </button></Link>
+            <Link to={'/farmacia'}><button className='btnNavegacion'>Farmacia </button></Link>
+            <Link to={'/perfumeria'}><button className='btnNavegacion'>Perfumeria </button></Link>    
+            <Link to={'/dermocosmetica'}><button className='btnNavegacion'>Dermocosmética </button></Link>
         </div>
         </>
     )

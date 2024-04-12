@@ -1,14 +1,21 @@
 /*eslint-disable react/prop-types*/
+import { useContext } from 'react'
 import './CartWidget.css'
+import { Link } from 'react-router-dom'
+import { CartContext } from '../../context/CartContext'
+
 const CartWidget = () => {
+
+    const [cantCarrito] = useContext(CartContext)
 
     return (
         <>
             <div>
-                <div className='estilo'>
-                    <p>🛒</p>
-                    <p style={{color:"white"}}>0</p>
+            <Link to='/cart' className='linkCarrito'>
+                <div className='estiloCarrito'>
+                    <p>🛒<span style={{color:"white"}}>{cantCarrito}</span></p>
                 </div>
+            </Link>
             </div>
         </>
     )

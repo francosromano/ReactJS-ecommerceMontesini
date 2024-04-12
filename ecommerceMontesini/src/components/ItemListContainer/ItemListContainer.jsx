@@ -4,7 +4,7 @@ import { getProductos, getProductosbyCategoria } from '../../asyncMock'
 import { useParams } from "react-router-dom"
 
 /*eslint-disable react/prop-types*/
-const ItemListContainer = ({ greeting }) => {
+const ItemListContainer = () => {
     const [productos, setProductos] = useState([])
 
     const { categoria } = useParams()
@@ -22,9 +22,8 @@ const ItemListContainer = ({ greeting }) => {
 
     return (
         <>
-            <h1>{greeting}</h1>
             <section className="contItem">
-                <ItemList productos={productos} />
+                <ItemList productos={productos}  />
             </section>
         </>
     )
