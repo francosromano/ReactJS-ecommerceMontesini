@@ -1,33 +1,33 @@
 import { useState, useEffect } from "react"
-import { getProductosbyName } from "../../asyncMock"
 import ItemDetail from "../ItemDetail/ItemDetail"
 import { useParams } from "react-router-dom"
+import {doc, getDoc} from "firebase/firestore"
+import { database } from "../../Firebase/Firebase"
 
-// eslint-disable-next-line react/prop-types
 const ItemDetailContainer = () => {
+    const [item, setItem] = useState(null)
 
-    const [productos, setProductos] = useState([null])
-
-    const { nombre } = useParams()
-
+    const nombre= useParams().nombre
 
     useEffect(() => {
-        getProductosbyName(nombre)
-            .then(resolve => {
-                setProductos(resolve)
-            })
-            .catch(error => {
-                console.error(error)
-            })
-    }, [nombre])
+      const docDatabase = doc(database,"productos",nombre)
+      
+      getDoc(docDatabase)
+          .then((resp) => {
+              const data = resp.data()
+              setItem({...data, nombre: nombre})
+          })
+          .catch((error) => {
+              console.error(error)
+          });
+  }, [nombre]);
+    
 
-    return (
-        <>
-            <div>
-                <ItemDetail {...productos} />
-            </div>
-        </>
-    )
+  return (
+    <div>
+      {item ? <ItemDetail {...item}/> : <p>Cargando...</p>}
+    </div>
+  )
 }
 
 export default ItemDetailContainer

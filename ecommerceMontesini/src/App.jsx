@@ -1,8 +1,8 @@
-import './App.css'
 import NavBar from './components/NavBar/NavBar'
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
 import Cart from './components/Cart/Cart'
+import CheckOut from './components/CheckOut/CheckOut'
 import { CartProvider } from './context/CartContext'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
@@ -10,7 +10,7 @@ function App() {
   
   return (
     <>
-        <CartProvider>
+      <CartProvider>
       <BrowserRouter>
         <NavBar/>
 
@@ -20,11 +20,12 @@ function App() {
           <Route exact path='/:categoria' element={<ItemListContainer />} />
           <Route exact path='/detalle/:nombre' element={<ItemDetailContainer />} />
           <Route exat path='/cart' element={<Cart/>}/>
+          <Route exat path='/CheckOut' element={<CheckOut/>}/>
           <Route path='*' element={<h1>Direccion no encontrada</h1>} />
 
         </Routes>
         
-      </BrowserRouter>
+        </BrowserRouter>
         </CartProvider>
     </>
   )

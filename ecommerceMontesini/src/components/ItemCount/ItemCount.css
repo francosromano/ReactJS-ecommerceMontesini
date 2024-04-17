@@ -1,5 +1,19 @@
+.btnContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.btnsContador{
+    display: flex;
+    justify-content: center;
+}
+
 .btnContador{
+    display: flex;
+    align-self: center;
+    justify-content: center;
     width: 30px;
+    height: 20px;
     margin-inline: 10px;
     text-align: center;
     border-radius: 5px;
@@ -14,6 +28,8 @@
     text-align: center;
 }
 .btnComprar{
+    align-self: center;
+    width: 100px;
     margin: 5px;
     padding: 5px 10px;
     border: 1px solid black;
