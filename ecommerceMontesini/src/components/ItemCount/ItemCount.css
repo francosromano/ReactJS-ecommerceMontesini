@@ -1,6 +1,7 @@
 .btnContainer{
     display: flex;
     flex-direction: column;
+    align-content: center;
 }
 
 .btnsContador{
@@ -11,6 +12,7 @@
 .btnContador{
     display: flex;
     align-self: center;
+    align-items: center;
     justify-content: center;
     width: 30px;
     height: 20px;
@@ -23,10 +25,10 @@
     cursor: pointer;
 }
 
-.inputContador{
-    width: 40px;
-    text-align: center;
+.cantContador{
+    margin: 0px;
 }
+
 .btnComprar{
     align-self: center;
     width: 100px;

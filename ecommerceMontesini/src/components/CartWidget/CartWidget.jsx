@@ -6,18 +6,17 @@ import { CartContext } from '../../context/CartContext'
 
 const CartWidget = () => {
 
-const {cantidadEnCarrito} = useContext(CartContext)
+    const { cantidadEnCarrito } = useContext(CartContext)
 
-return (
-    <>
-        <div>
-        <Link to='/cart' className='linkCarrito'>
-            <div className='estiloCarrito'>
-                <p>🛒<span style={{color:"white"}}>{cantidadEnCarrito()}</span></p>
-            </div>
-        </Link>
+    return (
+        <div className='divCartWidget'>
+            <Link to='/cart' className='linkCarrito'>
+                <div className='estiloCarrito'>
+                    <p className='numeroCartWidget'>🛒<span style={{ color: "white" }}>{cantidadEnCarrito()}</span></p>
+                </div>
+            </Link>
         </div>
-    </>
-)
+
+    )
 }
 export default CartWidget

@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
 
+import './Item.css'
 import { useState, useContext } from "react"
 import ItemCount from "../ItemCount/ItemCount"
-import './Item.css'
 import { Link } from "react-router-dom"
 import { CartContext } from "../../context/CartContext"
 

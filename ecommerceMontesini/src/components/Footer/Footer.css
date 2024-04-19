@@ -1,0 +1,57 @@
+
+/************************** FOOTER   ************************/
+footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background: linear-gradient(rgb(130, 190, 130), rgb(60, 169, 60) );
+    border-top: 1px rgba(0, 0, 0, 0.312) solid;
+    margin: 30px 0px 0px;
+    padding-bottom: 10px;
+  
+    li {
+        text-align: center;
+        list-style: none;
+    }
+  }
+  
+  section {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+  }
+  
+  .aSection {
+    color: black;
+    text-decoration: none;
+  
+    &:hover {
+        text-decoration: underline;
+    }
+  
+    &:active {
+        color: white;
+    }
+  }
+  
+  .h2Section {
+    color: rgba(30, 80, 173, 0.774);
+  }
+  
+  a {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    margin: 0 30px;
+    cursor: pointer;
+  }
+  
+  
+  
+  .menuNav {
+    border-bottom: 1px rgba(30, 80, 173, 0.774) solid;
+  }
+  
+  .nav-item:hover {
+    font-weight: 500;
+  }

@@ -29,14 +29,14 @@ const ItemDetail = (item) => {
           <div className="divDatosDetalle">
 
              <div className="divBreadcrums">
-                 <Link to={`/${categoria}`} className="breadcrumsCat">{categoria}</Link> / {nombre}
+                 <Link to={`/${categoria}`} className="breadcrumsCat">{categoria}</Link> /  {nombre}
              </div>
 
               <h2 className='tituloDetalle'>{nombre}</h2>
 
               <div className="descripDetalle">
-                      {descripcion}
-                   <p>{acciones}</p>
+                   <p className='textoDescripcion'>{descripcion}</p>
+                   <p className='textoDescripcion'>{acciones}</p>
                    <h3 className='precioDetalle'>$ {precio}</h3>
                    <h3 className="stockDetalle" style={{ color: stock === 0 ? '' : stock === 1 ? 'red' : stock <= 2 ? 'orange' : 'green' }}>
                        {stock === 1 ? 'Última unidad' : stock === 0 ? 'Sin stock' : stock <= 2 ? '¡Pocas unidades!' : 'Disponible'}: {stock} unidades </h3>

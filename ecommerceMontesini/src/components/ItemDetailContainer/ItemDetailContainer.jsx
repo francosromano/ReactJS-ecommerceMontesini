@@ -31,9 +31,9 @@ const ItemDetailContainer = () => {
     }, [nombre])
 
     return (
-        <div>
+        <>
             {item ? <ItemDetail {...item} /> : <p>Cargando...</p>}
-        </div>
+        </>
     )
 }
 

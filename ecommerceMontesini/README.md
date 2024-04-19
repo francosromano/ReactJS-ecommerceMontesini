@@ -13,17 +13,19 @@
 
 ⚠️ Dependencias necesarias: 
 
-- firebase: "^10.11.0"
+- bootstrap: 5.3.3
 
-- react: "^18.2.0"
+- firebase: 10.11.0
 
-- react-dom: "^18.2.0"
+- react: 18.2.0"
 
-- react-hook-form: "^7.51.3"
+- react-dom: 18.2.0
 
-- react-router-dom: "^6.22.3"
+- react-hook-form: 7.51.3
 
-- toastify-js: "^1.12.0"
+- react-router-dom: 6.22.3
+
+- toastify-js: 1.12.0
   
 
 ## *** Iniciar proyecto con " npm run dev " ***

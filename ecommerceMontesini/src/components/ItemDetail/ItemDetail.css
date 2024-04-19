@@ -6,7 +6,6 @@
     padding: 20px;
     height: 500px;
     display:flex;
-    gap: 50px;
     border-radius: 5px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7);
     background-color: #fafafacd;
@@ -20,7 +19,6 @@
 
 .divImgDetalle{
     width: 50%;
-    align-self: center;
     border-right: 1px solid rgba(30, 80, 173, 0.774);
 }
 
@@ -33,7 +31,8 @@
 }
 
 .descripDetalle{
-    padding: 20px 20px 0px 20px
+    text-align: center;
+    padding: 20px 20px 0px 20px;
 }
 
 .divBreadcrums{
@@ -44,14 +43,18 @@
 
 .breadcrumsCat{
     text-decoration: none;
-    color:darkgray
+    color:darkgray;
+    margin-left: 30px;
+    margin-right: 0px;
+    
 }
 
 .tituloDetalle{
     color: rgba(5, 46, 122, 0.774);
     font-size: 30px ;
     border-bottom: 1px solid rgba(30, 80, 173, 0.774);
-    padding: 20px
+    padding: 20px;
+    font-weight: bold;
 }
 
 .precioDetalle{
@@ -61,8 +64,8 @@
 
 .stockDetalle{
     margin: 0px;
-    margin-bottom: 25px;
-    font-weight: 100px;
+    margin-bottom: 15px;
+    font-size: 20px;
     color: grey
 }
 

@@ -5,6 +5,9 @@ import Cart from './components/Cart/Cart'
 import CheckOut from './components/CheckOut/CheckOut'
 import { CartProvider } from './context/CartContext'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Footer from './components/Footer/Footer'
+import logoWhatsapp from './assets/logoWhatsapp.png'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
 
@@ -24,9 +27,11 @@ function App() {
             <Route path='*' element={<h1>Direccion no encontrada</h1>} />
 
           </Routes>
-
+          <Footer />
         </BrowserRouter>
       </CartProvider>
+            
+      <a href="https://api.whatsapp.com/message/PEPW73BR2VMGO1?autoload=1&app_absent=0" target="_blank"><img className="iconoWhatsapp" src={logoWhatsapp} alt="Icono Whatsapp" /></a>
     </>
   )
 }

@@ -1,3 +1,13 @@
+.btnsRedes{
+    display: flex;
+    gap: 10px;
+}
+
+.navBarHead{
+    top: 0px;
+    position: sticky;
+}
+
 .logoNavBar {
     display: flex;
     flex-direction: column;
@@ -8,6 +18,35 @@
     width: 250px;
 }
 
+.divBuscador{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+}
+
+.formNavbar{
+    display: flex;
+    width: 275px;
+    border-radius: 50px;
+}
+
+.inputFormNavBar{
+    height: 40px;
+    border-radius: 50px;
+    border: none;
+}
+
+.btnBusqueda{
+    background: none;
+    border: none;
+    font-size: x-large;
+    transition: all 0.5s;
+}
+.btnBusqueda:hover{
+    background-color: rgba(68, 227, 251, 0.774);
+    border-radius: 5px;
+}
 
 .cartWidget {
     display: flex;

@@ -16,41 +16,47 @@ const Cart = () => {
         eliminarItem(prodId)
     }
 
-    const handleCheckOut = () =>{
+    const handleCheckOut = () => {
         alert("Será redirido a la sección de pago")
     }
     return (
         <div className='contenedorCarrito'>
-            <div className='contenedorProds'>            
-            {
-                carrito.map((prod) => (
-                    <div key={prod.id} className='contenedorCart'>
-                        <div className='divImg'>
-                        <img className="estiloImgs" src={prod.img} alt={prod.nombre} />
+            <div className='contenedorProds'>
+                {   carrito.length > 0 ? (
+                    carrito.map ((prod) => (
+                        <div key={prod.id} className='contenedorCart'>
+                            <div className='divImg'>
+                                <img className="estiloImgs" src={prod.img} alt={prod.nombre} />
+                            </div>
+                            <div className='divDescrip'>
+                                <div className='divDatoItem'>
+                                    <h3 className="nombreItem"> {prod.nombre}</h3>
+                                </div>
+                                <div className='divPrecio'>
+                                    <p className="precioItem"> Precio unitario: ${prod.precio}</p>
+                                    <p>Unidades: {prod.cantidad}</p>
+                                    <p>Precio total: ${(prod.precio * prod.cantidad).toFixed(2)}</p>
+                                </div>
+                            </div>
+                            <div className='divBtnElimProd'>
+                                <button className='btnElimProd' onClick={() => handleEliminarItem(prod.id)}>❌</button>
+                            </div>
                         </div>
-                        <div className='divDescrip'>
-                        <h3 className="nombreItem"> {prod.nombre}</h3>
-                        <p className="precioItem">${prod.precio}</p>
-                        <p>Precio total: ${(prod.precio * prod.cantidad).toFixed(2)}</p>
-                        <p>Unidades: {prod.cantidad}</p>
-                        </div>
-                        <div className='divBtnElimProd'>
-                        <button className='btnElimProd' onClick={() => handleEliminarItem(prod.id)}>❌</button>
-                        </div>
-                    </div>
-                ))
-            }
+                    )) 
+                ) : <h4 className='carritoVacio'>Carrito vacio</h4>}
             </div>
             <div className='contenedorTotal'>
-                <h2>Precio total: ${precioTotal().toFixed(2)}</h2>
-                    {   carrito.length > 0 ?
+                <h2 className='precioTotalTitulo'>Total:</h2>
+                <h3 className='precioTotal'>${precioTotal().toFixed(2)}</h3>
+                {carrito.length > 0 ?
                     <>
                         <button className='vacCarr' onClick={handleVaciarCarrito}>🗑️</button>
-                        <button className='btnCheckOut' onClick={handleCheckOut}> 
-                                <Link className='linkCheckOut' to={'/CheckOut'} >Finalizar compra </Link>
-                        </button>
-                    </>    : <h1>Tu carrito está vacío </h1>
-                    }    
+                        <Link to={'/CheckOut'} >
+                            <button className='btnCheckOut' onClick={handleCheckOut}>Finalizar compra</button> 
+                        </Link>
+                        
+                    </> : ""
+                }
             </div>
 
         </div>

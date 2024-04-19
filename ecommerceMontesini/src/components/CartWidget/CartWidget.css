@@ -1,12 +1,28 @@
-.estiloCarrito {
+.divCartWidget {
     display: flex;
-    justify-content:center;
-    font-weight: bolder;
-    font-size:20px;
-    background-color:rgba(22, 63, 139, 0.774);
-    width:50px;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+
 }
 
-.linkCarrito{
-text-decoration: none;
+.estiloCarrito {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 20px;
+    background-color: rgba(22, 63, 139, 0.774);
+    width: 50px;
+    height: 70px;
+}
+
+.linkCarrito {
+    text-decoration: none;
+    margin-inline-end: 5px;
+}
+
+.numeroCartWidget{
+    display: flex;
+    margin: 0px;
 }
