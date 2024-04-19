@@ -1,0 +1,73 @@
+.divSeleccion{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 100px
+}
+
+.opcionSeleccion{
+    width: 300px;
+    height: 150px;
+    border: 3px solid black;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.opcionSeleccion:hover,
+.opcionSeleccion:focus{
+    background-color: rgba(240, 248, 255, 0.41);
+}
+.tituloSeleccion{
+    margin: 5px;
+}
+.imgSeleccion{
+    height: 100px;
+    object-fit: contain;
+}
+
+.formCompra{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    width: 300px;
+    margin-inline: auto;
+    gap: 3px;
+}
+
+
+.divDatos{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    background-color: lightgrey;
+}
+
+.formCompra{
+    text-align: start;
+}
+
+.labelForm{
+    font-weight: bold;
+}
+.inputForm{
+    font-family: 'Times New Roman';
+    font-size: 20px;
+}
+.btnForm{
+    width: 200px;
+    background-color: rgba(30, 80, 173, 0.774);
+    color: #fafafa;
+    border: 1px solid black;
+    margin: auto;
+    margin-top: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 5px 10px;
+    border-radius: 4px;
+}

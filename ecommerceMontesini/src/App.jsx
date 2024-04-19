@@ -7,26 +7,26 @@ import { CartProvider } from './context/CartContext'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 function App() {
-  
+
   return (
     <>
       <CartProvider>
-      <BrowserRouter>
-        <NavBar/>
+        <BrowserRouter>
+          <NavBar />
 
-        <Routes>
+          <Routes>
 
-          <Route exact path='/' element={<ItemListContainer />} />
-          <Route exact path='/:categoria' element={<ItemListContainer />} />
-          <Route exact path='/detalle/:nombre' element={<ItemDetailContainer />} />
-          <Route exat path='/cart' element={<Cart/>}/>
-          <Route exat path='/CheckOut' element={<CheckOut/>}/>
-          <Route path='*' element={<h1>Direccion no encontrada</h1>} />
+            <Route exact path='/' element={<ItemListContainer />} />
+            <Route exact path='/:categoria' element={<ItemListContainer />} />
+            <Route exact path='/detalle/:nombre' element={<ItemDetailContainer />} />
+            <Route exat path='/cart' element={<Cart />} />
+            <Route exat path='/CheckOut' element={<CheckOut />} />
+            <Route path='*' element={<h1>Direccion no encontrada</h1>} />
 
-        </Routes>
-        
+          </Routes>
+
         </BrowserRouter>
-        </CartProvider>
+      </CartProvider>
     </>
   )
 }

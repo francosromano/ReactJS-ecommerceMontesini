@@ -8,9 +8,8 @@ const Cart = () => {
 
     const { carrito, precioTotal, vaciarCarrito, eliminarItem } = useContext(CartContext);
 
-    const handleVaciarCarrito = () => {
-        alert("Carrito vaciado")
-        vaciarCarrito();
+    const handleVaciarCarrito = (prodId) => {
+        vaciarCarrito(prodId)
     }
 
     const handleEliminarItem = (prodId) => {

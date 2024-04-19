@@ -1,6 +1,7 @@
 import CartWidget from "../CartWidget/CartWidget"
 import { Link } from "react-router-dom"
 import './NavBar.css'
+import logo from "../../assets/logoCompleto.png"
 
 const NavBar = () => {
 
@@ -8,7 +9,7 @@ const NavBar = () => {
         <nav>
             <div className="cartWidget">
                 <div className="logoNavBar">
-                    <Link to={`/`}><img className="imgLogo" src='https://farmaciamontesini.com.ar/index_files/FM-logo2380.png' alt="Logo Farmacia" /></Link>
+                    <Link to={`/`}><img className="imgLogo" src={logo} alt="Logo Farmacia" /></Link>
                 </div>
 
                 <div>

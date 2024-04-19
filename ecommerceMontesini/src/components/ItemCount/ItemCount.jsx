@@ -1,12 +1,12 @@
 /* eslint-disable react/prop-types */
 
-import Toastify from 'toastify-js';
-import "toastify-js/src/toastify.css";
-import './ItemCount.css';
-import { useState } from 'react';
+import Toastify from 'toastify-js'
+import "toastify-js/src/toastify.css"
+import './ItemCount.css'
+import { useState } from 'react'
 
 const ItemCount = ({ cantidad, nombre, stock, handleRestar, handleSumar, handleAgregar }) => {
-  const [, setContador] = useState(cantidad);
+  const [, setContador] = useState()
 
   const handleAgregarClick = () => {
       if (cantidad !== 0 && cantidad > 0) {
@@ -19,8 +19,8 @@ const ItemCount = ({ cantidad, nombre, stock, handleRestar, handleSumar, handleA
                   background: 'linear-gradient(to left, #008000, #10B02D)',
                   borderRadius: '20px',
               },
-          }).showToast();
-          setContador(0);
+          }).showToast()
+          setContador(0)
       } else {
           Toastify({
               text: `Ingrese cantidad deseada`,
@@ -31,11 +31,11 @@ const ItemCount = ({ cantidad, nombre, stock, handleRestar, handleSumar, handleA
                   background: 'linear-gradient(to left, red, #e4302b)',
                   borderRadius: '20px',
               },
-          }).showToast();
+          }).showToast()
       }
-      handleAgregar(cantidad);
-      
-  };
+      handleAgregar(cantidad)
+
+  }
 
   return (
       <div className="btnContainer">
@@ -57,7 +57,7 @@ const ItemCount = ({ cantidad, nombre, stock, handleRestar, handleSumar, handleA
               Agregar
           </button>
       </div>
-  );
-};
+  )
+}
 
-export default ItemCount;
+export default ItemCount
