@@ -30,7 +30,7 @@ const Item = (item) => {
                 <Link to={`/detalle/${item.id}`}><button className="btnGeneral">Ver detalles</button></Link>
                 <h3 className="nombreItem"> {nombre}</h3>
                 <h5 className="stockItem" style={{ color: stock === 0 ? 'red' : stock === 1 ? 'red' : stock <= 2 ? 'orange' : 'green' }}>
-                    {stock === 1 ? 'Última unidad' : stock === 0 ? 'No disponible' : stock <= 2 ? 'Pocas unidades' : 'Disponible'}: {stock} unidades</h5>
+                    {stock === 1 ? '¡Última unidad!' : stock === 0 ? 'No disponible' : stock <= 2 ? '¡Pocas unidades!' : 'Disponible'}</h5>
                 <p className="precioItem">$ {precio}</p>
                 <ItemCount
                     stock={stock}

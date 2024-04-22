@@ -3,13 +3,36 @@ import './Cart.css'
 import { useContext } from 'react'
 import { CartContext } from '../../context/CartContext'
 import { Link } from 'react-router-dom'
+import Swal from 'sweetalert2'
 
 const Cart = () => {
 
     const { carrito, precioTotal, vaciarCarrito, eliminarItem } = useContext(CartContext);
 
     const handleVaciarCarrito = (prodId) => {
-        vaciarCarrito(prodId)
+        Swal.fire({
+            title: "¿Estás seguro?",
+            text: "No podrás deshacer esta acción",
+            icon: "warning",
+            position: "top",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Borrar todo",
+            cancelButtonText: "Cancelar",
+            backdrop: "rgba(0,0,0,0.943)"
+          }).then((result) => {
+            if (result.isConfirmed) {
+              vaciarCarrito(prodId);                                                 
+              Swal.fire({
+                icon: "success",
+                title: "¡Listo!",
+                text: "Tus productos han sido eliminados",
+                position: "top",
+                backdrop: "rgba(0,0,0,0.943)"
+              });
+            }
+          });
     }
 
     const handleEliminarItem = (prodId) => {
@@ -19,6 +42,8 @@ const Cart = () => {
     const handleCheckOut = () => {
         alert("Será redirido a la sección de pago")
     }
+
+
     return (
         <div className='contenedorCarrito'>
             <div className='contenedorProds'>

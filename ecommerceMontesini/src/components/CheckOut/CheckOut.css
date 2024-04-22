@@ -16,8 +16,9 @@
 
 .opcionSeleccion:hover,
 .opcionSeleccion:focus{
-    background-color: rgba(240, 248, 255, 0.41);
+    background-color: white;
 }
+
 .tituloSeleccion{
     margin: 5px;
 }
