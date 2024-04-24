@@ -40,7 +40,12 @@ const Cart = () => {
     }
 
     const handleCheckOut = () => {
-        alert("Será redirido a la sección de pago")
+        Swal.fire({
+            title: "Será redirigido a la sección de pago",
+            position: "center",
+            confirmButtonColor: "#3085d6",
+            backdrop: "rgba(0,0,0,0.943)"
+        })
     }
 
 

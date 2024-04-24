@@ -27,7 +27,6 @@ const CheckOut = () => {
             compra: carrito,
             totalCarrito: precioTotal()
         }
-        console.log(datosCompra)
 
         const pedidos = collection(database, "pedidos")
         addDoc(pedidos, datosCompra)
@@ -76,32 +75,35 @@ const CheckOut = () => {
     }
 
     return (
-        <>
-            <h1>Confirmar compra</h1>
+        <div>
+            <div className='padreSeleccion'>
 
-            <div>
-                <h2>Seleccione metodo de recepción</h2>
-                <div className='divSeleccion'>
-                    <div className='opcionSeleccion'>
-                        <h3 className='tituloSeleccion'>Envio a domicilio</h3>
-                        <img className='imgSeleccion' src={imagenDomicilio} alt="Imagen envio a domicilio" />
-                    </div>
-                    <div className='opcionSeleccion'>
-                        <h3 className='tituloSeleccion'>Retiro en tienda</h3>
-                        <img className='imgSeleccion' src={imagenTienda} alt="Imagen retirar en tienda" />
+                <h1>Confirmar compra</h1>
+
+                <div>
+                    <h2>Seleccione metodo de recepción</h2>
+                    <div className='divSeleccion'>
+                        <div className='opcionSeleccion'>
+                            <h3 className='tituloSeleccion'>Envio a domicilio</h3>
+                            <img className='imgSeleccion' src={imagenDomicilio} alt="Imagen envio a domicilio" />
+                        </div>
+                        <div className='opcionSeleccion'>
+                            <h3 className='tituloSeleccion'>Retiro en tienda</h3>
+                            <img className='imgSeleccion' src={imagenTienda} alt="Imagen retirar en tienda" />
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div>
-                <h2>Seleccione metodo de pago</h2>
-                <div className='divSeleccion'>
-                    <div className='opcionSeleccion'>
-                        <h3 className='tituloSeleccion'>Efectivo al recibir</h3>
-                        <img className='imgSeleccion' src={imgEfectivo} alt="Imagen Efectivo" />
-                    </div>
-                    <div className='opcionSeleccion'>
-                        <h3 className='tituloSeleccion'>Pago virtual</h3>
-                        <img className='imgSeleccion' src={imgPagoVirtual} alt="Imagen pago virtual" />
+                <div>
+                    <h2>Seleccione metodo de pago</h2>
+                    <div className='divSeleccion'>
+                        <div className='opcionSeleccion'>
+                            <h3 className='tituloSeleccion'>Efectivo al recibir</h3>
+                            <img className='imgSeleccion' src={imgEfectivo} alt="Imagen Efectivo" />
+                        </div>
+                        <div className='opcionSeleccion'>
+                            <h3 className='tituloSeleccion'>Pago virtual</h3>
+                            <img className='imgSeleccion' src={imgPagoVirtual} alt="Imagen pago virtual" />
+                        </div>
                     </div>
                 </div>
             </div>
@@ -124,7 +126,7 @@ const CheckOut = () => {
                     </form>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 

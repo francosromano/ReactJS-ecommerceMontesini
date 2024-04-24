@@ -13,8 +13,8 @@ function App() {
 
   return (
     <>
-      <CartProvider>
-        <BrowserRouter>
+      <BrowserRouter>
+        <CartProvider>
           <NavBar />
 
           <Routes>
@@ -28,9 +28,9 @@ function App() {
 
           </Routes>
           <Footer />
-        </BrowserRouter>
-      </CartProvider>
-            
+        </CartProvider>
+      </BrowserRouter>
+
       <a href="https://api.whatsapp.com/message/PEPW73BR2VMGO1?autoload=1&app_absent=0" target="_blank"><img className="iconoWhatsapp" src={logoWhatsapp} alt="Icono Whatsapp" /></a>
     </>
   )
