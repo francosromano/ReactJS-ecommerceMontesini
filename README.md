@@ -17,9 +17,9 @@
 
 - firebase: 10.11.0
 
-- react: 18.2.0"
+- react: 18.2.0
 
-- react-bootstrap: ^2.10.2,
+- react-bootstrap: 2.10.2
 
 - react-dom: 18.2.0
 
@@ -27,9 +27,9 @@
 
 - react-router-dom: 6.22.3
 
-- sweetalert2: ^11.10.8,
+- sweetalert2: 11.10.8
 
-- sweetalert2-react-content": ^5.0.7,
+- sweetalert2-react-content: 5.0.7
 
 - toastify-js: 1.12.0
   
